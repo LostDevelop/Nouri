@@ -1,0 +1,34 @@
+.box1{
+    background-color: brown;
+    height: 100px;
+    width: 200px;
+    display: inline;
+    /* With the help of display inline property we can change block level element into inline element */
+}
+.box2{
+    background-color: cadetblue;
+    height: 100px;
+    width: 200px;
+    display: inline;
+}
+.box3{
+    background-color: green;
+    height: 100px;
+    width: 200px;
+    display: inline;
+}
+.span1{
+    background-color: red;
+    height: 100px;
+    width: 200px;
+    display: block;
+    /* with the help of display block property we can change inline element into block element */
+}
+.span2{
+    background-color: yellow;
+    margin: 20px;
+    /* we can set custom height and width in inline element but we can change horizontally width using margin */
+}
+.span3{
+    background-color: blueviolet;
+}

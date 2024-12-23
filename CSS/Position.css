@@ -1,0 +1,37 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.container{
+    width: 100vw;
+    height: 180vw;
+    background-color: lightblue;
+}
+.container2{
+    width: 100vw;
+    height: 1000px;
+    background-color: aquamarine;
+}
+.box{
+    height: 100px;
+    width: 200px;
+    background-color: black;
+    color: white;
+}
+.box1{
+    position: relative;
+    left: 200px;
+}
+.box2{
+    position: absolute;
+    top: 30px;
+    left: 430px;
+}
+.box3{
+    position: sticky;
+    top: 0px;
+}
+.box4{
+    position: fixed;
+    top: 290px;
+}

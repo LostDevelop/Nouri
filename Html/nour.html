@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nouri Hair Health Quiz</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .quiz-container {
+            background: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            width: 90%;
+            max-width: 500px;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+            color: #444;
+        }
+        .question {
+            margin: 20px 0;
+        }
+        label {
+            display: block;
+            margin: 10px 0;
+        }
+        button {
+            background-color: #FFD700;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button:hover {
+            background-color: #FFC107;
+        }
+        .result {
+            display: none;
+            text-align: center;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="quiz-container">
+        <h1>Nouri Hair Health Quiz</h1>
+        <form id="quizForm">
+            <div class="question">
+                <p>1. What is your primary hair concern?</p>
+                <label><input type="radio" name="concern" value="dryness" required> Dryness</label>
+                <label><input type="radio" name="concern" value="damage"> Damage</label>
+                <label><input type="radio" name="concern" value="frizz"> Frizz</label>
+            </div>
+            <div class="question">
+                <p>2. How often do you style your hair with heat?</p>
+                <label><input type="radio" name="heat" value="often" required> Often</label>
+                <label><input type="radio" name="heat" value="sometimes"> Sometimes</label>
+                <label><input type="radio" name="heat" value="rarely"> Rarely</label>
+            </div>
+            <div class="question">
+                <p>3. How would you describe your scalp?</p>
+                <label><input type="radio" name="scalp" value="oily" required> Oily</label>
+                <label><input type="radio" name="scalp" value="dry"> Dry</label>
+                <label><input type="radio" name="scalp" value="balanced"> Balanced</label>
+            </div>
+            <button type="button" onclick="showResults()">Get My Routine</button>
+        </form>
+        <div class="result" id="result">
+            <h2>Your Recommended Routine</h2>
+            <p id="routine"></p>
+        </div>
+    </div>
+    <script>
+        function showResults() {
+            const form = document.getElementById('quizForm');
+            const concern = form.concern.value;
+            const heat = form.heat.value;
+            const scalp = form.scalp.value;
+
+            let routine = "";
+
+            if (concern === "dryness") {
+                routine += "Hydra: Deep hydration to quench thirsty strands.<br>";
+            } else if (concern === "damage") {
+                routine += "Nouri: Intensive nourishment for repair.<br>";
+            } else if (concern === "frizz") {
+                routine += "Shie: Protective shield against frizz and humidity.<br>";
+            }
+
+            if (heat === "often") {
+                routine += "Shie: Essential heat protection for styled hair.<br>";
+            }
+
+            if (scalp === "dry") {
+                routine += "Hydra: Soothing hydration for a healthy scalp.<br>";
+            } else if (scalp === "oily") {
+                routine += "Vita: Energizing care to balance oil production.<br>";
+            }
+
+            document.getElementById('routine').innerHTML = routine;
+            document.getElementById('result').style.display = 'block';
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,17 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.join-btn{
+    width: 10em;
+    height: 4ex;
+    font-weight: bold;
+    background-color: #ffcb43;
+    background-image: linear-gradient(319deg, #ffcb43 0%, #ff6425 37%, #ff0016 100%);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.join-btn:active{
+    box-shadow: 2px 2px 2px 2px aqua;
+}

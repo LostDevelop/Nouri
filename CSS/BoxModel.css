@@ -1,0 +1,35 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* it gives an actual height and width for a box. */
+}
+.intro{
+    border: 2px solid black;
+    width: 600px;
+    height: 70px;
+}
+span{
+    border: 2px solid gold;
+    /* height: 20px;
+    width: 30px; */ 
+    /* its an inline element so it occupies only needed space. */
+}
+.box1{
+    border: 2px solid grey;
+    border-radius: 10px;
+    height: 200px;
+    width: 300px;
+    padding: 50px 50px; 
+    margin: 20px;
+    /* Padding helps to increse the spaces between the border and content */
+}
+.box2{
+    border: 2px solid red;
+    border-radius: 10px;
+    height: 200px;
+    width: 300px;
+    padding: 10px 20px 30px 40px;
+    margin: 20px;
+    /* Marginn is used to increase the space around elements and outside of defined borders */
+}

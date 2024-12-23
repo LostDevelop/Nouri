@@ -1,0 +1,20 @@
+.grid-container{
+    background-color: rgb(119, 119, 138);
+    display:grid;
+    grid-template-columns: auto auto auto ;
+    padding: 10px;
+    text-align: center;
+}
+.grid-items{
+    padding: 20px;
+    background-color: aqua;
+    border: 1px solid black;
+}
+.item1{
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+.item5{
+    grid-column-start: 1;
+    grid-column-end: 3;
+}

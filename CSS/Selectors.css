@@ -1,0 +1,25 @@
+/*Universal Selector: in the entire page we can change anything but it has lowest priorty*/
+*{
+    margin: 0;
+    padding: 0;
+}
+
+/* To change the property of the same tag is Element selector */
+
+h1{
+    background-color: black;
+    color: white;
+}
+
+/* To change a particular element so we have to give a unique id  is Id selector */
+
+#info{
+    color: brown;
+}
+
+/* To change multiple element in a particular section is called class selector */
+
+.para{
+    background-color: black;
+    color: yellow;
+}

@@ -1,0 +1,41 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.container{
+    height: 800px;
+    width: 100vw;
+    background-color: aquamarine;
+}
+.box{
+    height: 200px;
+    width: 200px;
+    background-color: black;
+    color: whitesmoke;
+    animation: Mover 5s linear 2s 2 alternate forwards;
+    position: relative;
+    top: 0px;
+    left: 0px;
+}
+@keyframes Mover {
+    0% {
+        left: 0;
+        top: 0;
+    }
+    25% {
+        left: 900px;
+        top: 0;
+    }
+    50% {
+        left: 900px;
+        top: 500px;
+    }
+    75% {
+        left: 200px;
+        top: 500%;
+    }
+    100% {
+        left: 0;
+        top: 0;
+    }
+}

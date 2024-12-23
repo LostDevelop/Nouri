@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+</head>
+<body>
+    <form action="">
+        <label for="FirstName">Enter your first name:</label>
+        <input type="text" id="FirstName" name="FirstName" placeholder="Enter your first name"><br><br>
+        <label for="LastName" >Enter your last name:</label>
+        <input type="text" id="LastName" name="LastName" placeholder="Enter your last name"><br><br>
+        <label for="Email">Enter your email address</label>
+        <input type="email" id="Email" name="Email" placeholder="Enter your email address"><br><br>
+        <label for="Password">Enter your password:</label>
+        <input type="password" id="password" name="Password" placeholder="Enter your password" minlength="8"><br><br>
+        <p>Select your gender:</p>
+        <input type="radio" name="gender" id="Male" value="Male">
+        <label for="Male">Male</label>
+        <input type="radio" name="gender" id="Female" value="Female">
+        <label for="Female">Female</label>
+        <input type="radio" name="gender" id="Other" value="0ther">
+        <label for="Other">Other</label><br><br>
+        <fieldset>
+            <legend>Genral Information</legend>
+            <label for="Age">select your age</label>
+            <select name="Age" id="Age" required>
+            <option value="0-10" selected>0-10</option>
+            <option value="10-18">10-18</option>
+            <option value="18-40">18-40</option>
+            <option value="40-60">40-60</option>
+        </select><br><br>
+        <label for="Intro">Your Introduction</label><br><br>
+        <textarea name="Intro" id="Intro" cols="30" rows="10"></textarea><br><br>
+    </fieldset><br>
+        <label for="Number">Enter your mobile number:</label>
+        <input type="tel" name="Number" id="Number" placeholder="Enter your mobile number"><br><br>
+        <p>Select your field</p>
+        <input type="checkbox" id="School" value="School" name="School">
+        <label for="School" >School</label>
+        <input type="checkbox" id="College" value="college" name="College">
+        <label for="College">College</label>
+        <input type="checkbox" id="Occupation" value="Occupation" name="Occupation">
+        <label for="Occupation">Occupation</label><br><br>
+        <label for="Birthday">Enter your birthday</label>
+        <input type="date" id="Birthday" name="Birthday"><br><br>
+        <input type="submit" value="submit">
+    </form>
+</body>
+</html>

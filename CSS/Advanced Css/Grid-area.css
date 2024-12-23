@@ -1,0 +1,38 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.grid-container{
+    height: 1000px;
+    width: 100vw;
+    background-color: aqua;
+    text-align: center;
+    display: grid;
+    grid-template: "Header Header Header"
+    "Sidebar Content-1 Content-1"
+    "Sidebar Content-2 Content-3"
+    "Footer Footer Footer";
+}
+.grid-item{
+    background-color: brown;
+    border: 1px solid black;
+    margin: 10px;
+}
+#Header{
+    grid-area: Header;
+}
+#Sidebar{
+    grid-area: Sidebar;
+}
+#Content-1{
+    grid-area: Content-1;
+}
+#Content-2{
+    grid-area: Content-2;
+}
+#Content-3{
+    grid-area: Content-3;
+}
+#Footer{
+    grid-area: Footer;
+}

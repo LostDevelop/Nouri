@@ -1,0 +1,12 @@
+h1{
+    text-align: center;
+    text-decoration: red line-through dashed;
+}
+.one{
+    text-align: center;
+    font-weight: 800;
+}
+.two{
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 25px;
+}

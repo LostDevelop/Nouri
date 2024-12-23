@@ -1,0 +1,59 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.container{
+    width: 100vw;
+    height: 1000px;
+    background-color: lightgreen;
+    display: flex;
+    flex-wrap: wrap;
+}
+.box{
+    height: 300px;
+    width: 400px;
+    margin: 10px;
+    background-color: black;
+    color: white;
+    border: 1px solid white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 2s linear ;
+}
+#rotatex:hover{
+    transform: rotateX(180deg);
+}
+#rotatey:hover{
+    transform: rotateY(180deg);
+}
+#rotatez:hover{
+    transform: rotatez(180deg);
+}
+#rotate3d:hover{
+    transform:  rotate3d(1,1,1,180deg);
+}
+#scalex:hover{
+    transform:  scaleX(0.5);
+}
+#scaley:hover{
+    transform:  scaley(2);
+}
+#scalez:hover{
+    transform:perspective(200px) scaleZ(-3) rotatex(23deg);
+}
+#scale3d:hover{
+    transform:scale3d(3,1,4);
+}
+#translatex:hover{
+    transform:translateX(100px) ;
+}
+#translatey:hover{
+    transform: translateY(100px) ;
+}
+#translatez:hover{
+    transform:perspective(200px) translateZ(100px) ;
+}
+#translate3d:hover{
+    transform: translate3d(100px, 120px, 150px);
+}

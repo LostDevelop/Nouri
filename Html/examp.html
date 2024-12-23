@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nouri Test</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            position: relative;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            margin-top: 50px;
+            z-index: 10;
+            position: relative;
+        }
+        h1 {
+            text-align: center;
+            color: #ff7b00;
+        }
+        .question {
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+        select, button {
+            width: 100%;
+            padding: 10px;
+            margin-top: 10px;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+        }
+        .result {
+            display: none;
+            margin-top: 20px;
+            padding: 20px;
+            background-color: #e1f7d5;
+            border-radius: 8px;
+            opacity: 0; /* Start with no visibility */
+            transform: translateY(20px); /* Start below */
+            transition: opacity 0.8s ease, transform 0.8s ease; /* Add transition */
+        }
+        .result.show {
+            opacity: 1; /* Fade in */
+            transform: translateY(0); /* Move to final position */
+        }
+        .button-container {
+            text-align: center;
+            margin-top: 20px;
+        }
+        button {
+            background-color: #ff7b00;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #e06b00;
+        }
+
+        /* Nouri animation */
+        .nouri {
+            width: 100px;
+            height: 100px;
+            background-color: #ff7b00;
+            border-radius: 50%;
+            position: absolute;
+            top: -120px; /* Start above the screen */
+            left: 20px;
+            opacity: 0;
+            transition: top 1s ease-in-out, opacity 1s ease-in-out;
+        }
+
+        /* When Nouri becomes visible */
+        .nouri.visible {
+            top: 20px;
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Nouri Animation -->
+<div class="nouri" id="nouri"></div>
+
+<div class="container">
+    <h1>Nouri Test</h1>
+    <div class="question">
+        <label for="hair-condition">How would you describe your hair condition?</label>
+        <select id="hair-condition">
+            <option value="dry">Dry</option>
+            <option value="oily">Oily</option>
+            <option value="brittle">Brittle</option>
+            <option value="frizzy">Frizzy</option>
+        </select>
+    </div>
+
+    <div class="question">
+        <label for="environmental-damage">Do you face daily environmental damage (pollution, heat, UV)?</label>
+        <select id="environmental-damage">
+            <option value="yes">Yes</option>
+            <option value="no">No</option>
+        </select>
+    </div>
+
+    <div class="button-container">
+        <button onclick="analyzeHairHealth()">Analyze Hair Health</button>
+    </div>
+
+    <div class="result" id="result">
+        <h3>Your Hair Test Results</h3>
+        <p id="hair-recommendation"></p>
+    </div>
+</div>
+
+<script>
+    function analyzeHairHealth() {
+        // Show the Nouri animation after clicking the button
+        const nouri = document.getElementById("nouri");
+        const resultElement = document.getElementById("result");
+        const recommendationElement = document.getElementById("hair-recommendation");
+
+        // Nouri becomes visible and moves into view
+        nouri.classList.add("visible");
+
+        const hairCondition = document.getElementById("hair-condition").value;
+        const environmentalDamage = document.getElementById("environmental-damage").value;
+
+        let recommendation = "";
+
+        if (hairCondition === "dry" && environmentalDamage === "yes") {
+            recommendation = "Your hair is dry and facing external damage. Nouri's nourishing formula will help hydrate and protect your strands from further environmental stress.";
+        } else if (hairCondition === "oily" && environmentalDamage === "no") {
+            recommendation = "Your hair is oily but protected from environmental stress. Nouri can help balance and maintain healthy hair texture.";
+        } else if (hairCondition === "brittle" && environmentalDamage === "yes") {
+            recommendation = "Your hair is brittle and exposed to damage. Nouri's protective shield will nourish your hair, making it stronger and resilient.";
+        } else if (hairCondition === "frizzy" && environmentalDamage === "yes") {
+            recommendation = "Your hair is frizzy and affected by environmental factors. Nouri's hydrating and smoothing properties will restore your hair's natural shine and texture.";
+        } else {
+            recommendation = "Nouri will provide the nourishment and protection your hair needs, no matter the condition!";
+        }
+
+        // Show the result and animate it
+        resultElement.style.display = "block";
+        resultElement.classList.add("show");
+        recommendationElement.textContent = recommendation;
+    }
+</script>
+
+</body>
+</html>
+

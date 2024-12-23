@@ -1,0 +1,36 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.container{
+    height: 700px;
+    width: 100vw;
+    background-color: lightgreen;
+    border: 1px solid black;
+}
+.box{
+    height: 200px;
+    width: 200px;
+    background-color: black;
+    color: white;
+    padding: 10px;
+    animation-name: bottom-mover;
+    animation-duration: 5s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: 2;
+    animation-direction:alternate-reverse;
+    animation-fill-mode: forwards;
+    position: relative;
+    top: 0px;
+    left: 0px;
+}
+@keyframes bottom-mover{
+    from{
+    top: 0px;
+    left: 0px;
+    }
+    to{
+        top: 480px;
+        left: 0px;
+    }
+}
